@@ -52,10 +52,26 @@ describe("Algorithm Tests", function() {
     })
 
     describe("should return false if the first str does not include the second str", function() {
-      it("should return false if the first str does not include the second str", function() {
+      it("includesSubstr(preamble, 'we the people') returns false", function() {
         assert.equal(algorithms._test.includesSubstr(preamble, "we the people"), false)
       })
     })
   })
 
+  describe("#confirmEnding", function() {
+    describe("Should return true if str ends with target", function() {
+      it("confirmEnding('once upon a time', 'time') returns true", function() {
+        assert.equal(algorithms._test.confirmEnding("once upon a time", "time"), true)
+      })
+      it("confirmEnding('once upon a time', 'n a time') returns true", function() {
+        assert.equal(algorithms._test.confirmEnding("once upon a time", "n a time"), true)
+      })
+    })
+
+    describe("Should return false unless the str ends with target", function() {
+      it("confirmEnding('If I only had a heart', 'If I') returns false", function() {
+        assert.equal(algorithms._test.confirmEnding("If I only had a heart", "Heart"), false)
+      })
+    })
+  })
 })

@@ -42,9 +42,22 @@ function includesSubstr(str1, str2) {
   return str1.includes(str2)
 }
 
+// ##### - ##### - ##### - ##### - ##### - ##### - ##### - ##### - #####
+// confirmEnding
+// When given a string and a target, return true if the string ends with the target
+// Otherwise, return false
+function confirmEnding(str, target) {
+  var end = "";
+  for(var i = str.length - target.length; i < str.length; i++) {
+    end += str[i];
+  }
+  return end === target;
+}
+
 exports._test = {
   testing: testing,
   palindrome: palindrome,
   largestNums: largestNums,
-  includesSubstr: includesSubstr
+  includesSubstr: includesSubstr,
+  confirmEnding: confirmEnding
 }
