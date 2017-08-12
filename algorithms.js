@@ -33,8 +33,18 @@ function largestNums(arr) {
   return arr.map( (subArr) => subArr.sort( (a, b) => b - a )[0] )
 }
 
+// ##### - ##### - ##### - ##### - ##### - ##### - ##### - ##### - #####
+// Includes Substring
+// When given two strings, return true if the first str includes the second str
+// Otherwise, return false
+
+function includesSubstr(str1, str2) {
+  return str1.includes(str2)
+}
+
 exports._test = {
   testing: testing,
   palindrome: palindrome,
-  largestNums: largestNums
+  largestNums: largestNums,
+  includesSubstr: includesSubstr
 }

@@ -36,4 +36,26 @@ describe("Algorithm Tests", function() {
     })
   })
 
+  describe("#includesSubstr", function() {
+    var preamble = "We the People of the United States, in Order to form..."
+
+    describe("should return true if the first str includes the second str", function() {
+      it("includesSubstr(preamble, 'People') returns true", function() {
+        assert.equal(algorithms._test.includesSubstr(preamble, "People"), true)
+      })
+      it("includesSubstr(preamble, '...') returns true", function() {
+        assert.equal(algorithms._test.includesSubstr(preamble, "..."), true)
+      })
+      it("includesSubstr(preamble, 'ited States') returns true", function() {
+        assert.equal(algorithms._test.includesSubstr(preamble, "ited States"), true)
+      })
+    })
+
+    describe("should return false if the first str does not include the second str", function() {
+      it("should return false if the first str does not include the second str", function() {
+        assert.equal(algorithms._test.includesSubstr(preamble, "we the people"), false)
+      })
+    })
+  })
+
 })
