@@ -28,10 +28,10 @@ describe("Algorithm Tests", function() {
         assert.equal(Array.isArray(algorithms._test.largestNums(arr1)), true)
       })
       it("largestNums(arr1) returns [3, 6]", function() {
-        assert.equal(algorithms._test.largestNums(arr1), [3, 6])
+        assert.deepEqual(algorithms._test.largestNums(arr1), [3, 6])
       })
       it("largestNums(arr2) return [4, 9, 9]", function() {
-        assert.equal(algorithms._test.largestNums(arr2), [4, 9, 9])
+        assert.deepEqual(algorithms._test.largestNums(arr2), [4, 9, 9])
       })
     })
   })
