@@ -55,14 +55,14 @@ function confirmEnding(str, target) {
 }
 
 // ##### - ##### - ##### - ##### - ##### - ##### - ##### - ##### - #####
-//chunkArrayInGroups
+//chunkArrInGroups
 // Given an array and number, return a new array with groups of arrays whose size
 // is equal to the number passed. If there are not enough numbers to create an array
 // of a size equal to number, return each number
-// i.e chunkArrayInGroups([1,2,3,4], 2) === [[1,2], [3,4]]
-// i.e chunkArrayInGroups([1,2,3,4], 3) === [[1,2,3], [4]]
+// i.e chunkArrInGroups([1,2,3,4], 2) === [[1,2], [3,4]]
+// i.e chunkArrInGroups([1,2,3,4], 3) === [[1,2,3], [4]]
 
-function chunkArrayInGroups(arr, size) {
+function chunkArrInGroups(arr, size) {
   var groups = [];
   for(var i = 0; i < arr.length; i += size) {
     groups.push(arr.slice(i, i + size));
@@ -76,5 +76,5 @@ exports._test = {
   largestNums: largestNums,
   includesSubstr: includesSubstr,
   confirmEnding: confirmEnding,
-  chunkArrayInGroups: chunkArrayInGroups
+  chunkArrInGroups: chunkArrInGroups
 }

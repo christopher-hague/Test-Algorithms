@@ -75,13 +75,13 @@ describe("Algorithm Tests", function() {
     })
   })
 
-  describe("#chunkArrayInGroups", function() {
+  describe("#chunkArrInGroups", function() {
     describe("Should split an array into subarrays with a length equal to size", function() {
-      it("chunkArrayInGroups([1,2,3,4,5,6,7,8], 4) returns [ [1,2,3,4], [5,6,7,8] ]", function() {
-        assert.deepEqual(algorithms._test.chunkArrayInGroups([1,2,3,4,5,6,7,8], 4), [[1,2,3,4], [5,6,7,8]])
+      it("chunkArrInGroups([1,2,3,4,5,6,7,8], 4) returns [ [1,2,3,4], [5,6,7,8] ]", function() {
+        assert.deepEqual(algorithms._test.chunkArrInGroups([1,2,3,4,5,6,7,8], 4), [[1,2,3,4], [5,6,7,8]])
       })
-      it("chunkArrayInGroups([1,2,3,4], 3) returns [[1,2,3], [4]]", function() {
-        assert.deepEqual(algorithms._test.chunkArrayInGroups([1,2,3,4], 3), [[1,2,3], [4]])
+      it("chunkArrInGroups([1,2,3,4], 3) returns [[1,2,3], [4]]", function() {
+        assert.deepEqual(algorithms._test.chunkArrInGroups([1,2,3,4], 3), [[1,2,3], [4]])
       })
     })
   })
