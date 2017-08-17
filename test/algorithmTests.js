@@ -85,4 +85,12 @@ describe("Algorithm Tests", function() {
       })
     })
   })
+
+  describe("#slasher", function() {
+    describe("Should return the remaining elements of arr after removing n elements from the head", function() {
+      it("slasher([1,2,3], 2) returns [3]", function() {
+        assert.equal(algorithms._test.slasher([1,2,3], 2), [3])
+      })
+    })
+  })
 })

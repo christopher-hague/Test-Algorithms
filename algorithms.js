@@ -8,7 +8,7 @@ function testing() {
 // Disregard all non-alphanumeric characters
 // i.e. "pop", "racecar", "i didi" should return true
 
-function parseStr(str) {
+function filterStr(str) {
   var alphaNums = "abcdefghijklmnopqrstuvwxyz1234567890"
   return str.split("").filter(function(char) {
     return alphaNums.includes(char.toLowerCase())
@@ -21,7 +21,7 @@ function reverseStr(str) {
 }
 
 function palindrome(str) {
-  return parseStr(str).toLowerCase() === reverseStr(parseStr(str).toLowerCase())
+  return filterStr(str).toLowerCase() === reverseStr(filterStr(str).toLowerCase())
 }
 
 // ##### - ##### - ##### - ##### - ##### - ##### - ##### - ##### - #####
@@ -70,11 +70,24 @@ function chunkArrInGroups(arr, size) {
   return groups;
 }
 
+// ##### - ##### - ##### - ##### - ##### - ##### - ##### - ##### - #####
+// Slasher
+// Return the remaining elements of an array after chopping off n elements
+// from the head. The head means the beginnings of the array, or the 0'th index
+// i.e. slasher([1,2,3], 2) === [3], slasher([1,2,3], 0) === [1,2,3]
+// slasher([1,2,3], 9) === []
+// slasher(["burgers", "fries", "shake"], 1) === ["shake"]
+
+function slasher(arr, n) {
+  return
+}
+
 exports._test = {
   testing: testing,
   palindrome: palindrome,
   largestNums: largestNums,
   includesSubstr: includesSubstr,
   confirmEnding: confirmEnding,
-  chunkArrInGroups: chunkArrInGroups
+  chunkArrInGroups: chunkArrInGroups,
+  slasher: slasher
 }
